@@ -12,14 +12,14 @@ public class Test1 {
     public void test() {
         RedisLock redisLock = new RedisLock("hhh", redisTemplate);
         new Thread(() -> {
-            redisLock.lock();
-            System.out.println("线程1锁了");
-            try {
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("线程1解锁了");
+//            redisLock.lock();
+//            System.out.println("线程1锁了");
+//            try {
+//                Thread.sleep(10000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            System.out.println("线程1解锁了");
             redisLock.unlock();
 
         }).start();
